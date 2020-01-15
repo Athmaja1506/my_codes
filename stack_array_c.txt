@@ -1,0 +1,77 @@
+#include <stdio.h>
+
+#define maxsize 101
+
+int a[maxsize];
+
+int top=-1;
+
+
+void push(int x)
+
+{ if(top==maxsize-1)
+
+    {printf("stack full");
+
+        return;
+
+    }
+
+ top++;
+
+ a[top]=x;
+
+}
+
+
+void pop()
+
+{ if(top==-1)
+
+  {printf("stack is empty");
+
+      return;
+
+  }
+
+ top--;
+
+}
+
+
+
+void print()
+
+{ int i;
+
+for(i=0;i<=top;i++)
+
+    {printf("%d",a[i]);
+
+    printf("\n");
+
+    }
+
+}
+
+
+
+
+int main()
+
+{
+ push(70);
+ 
+push(97);
+ pop();
+ 
+push(100); 
+
+ pop();     
+
+ pop();     
+
+ push(99);  
+ print();
+
+}
