@@ -1,0 +1,92 @@
+#include<stdio.h>
+
+#define maxsize 101
+
+int a[maxsize];
+
+int front = -1;
+
+int rear = -1;
+
+
+void enqueue (int x)
+
+{
+  if(rear == maxsize - 1)
+
+    {
+      printf ("cannot insert");
+
+      return;
+    }
+
+  else if(front = rear = -1)
+
+    {
+      front = rear = 0;
+
+    }
+  a[rear] = x;
+
+  rear = rear + 1;
+
+
+}
+
+
+
+void dequeue()
+
+{
+  if(front == rear == -1)
+
+    {
+      printf ("cannot delete");
+
+      }
+  
+if(front == rear)
+
+    {
+      front = rear = -1;
+
+    }
+
+  front++;
+
+}
+
+
+
+void print()
+
+{
+  int i;
+
+  for(i = 0; i < rear; i++)
+
+    {
+      printf ("%d", a[i]);
+    
+}
+
+}
+
+
+
+void main()
+
+{
+  enqueue (10);
+
+  enqueue (20);
+
+  dequeue ();
+
+  enqueue (30);
+
+  dequeue ();
+
+  print ();
+
+}
